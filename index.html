@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gadgets Dark Purple</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #0A0A0F;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #8D00FF, #0A0A0F);
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    header .logo {
+      font-weight: 700;
+      font-size: 24px;
+      color: #fff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li a {
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ccc;
+    }
+
+    .banner {
+      width: 100%;
+      height: 450px;
+      background: url('https://images.unsplash.com/photo-1612831201342-47e4b877ce37?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    }
+
+    .below-banner-images {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 10%;
+      gap: 20px;
+      background-color: #12121A;
+    }
+    .below-banner-images img {
+      width: 48%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 15px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .intro img {
+      width: 350px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .intro .text {
+      flex: 1;
+      min-width: 250px;
+    }
+    .intro .text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #c084fc;
+    }
+    .intro .text p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .image-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background: #0A0A0F;
+      text-align: center;
+      padding: 25px 10%;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media(max-width: 768px){
+      .below-banner-images {
+        flex-direction: column;
+      }
+      .below-banner-images img {
+        width: 100%;
+      }
+      .intro {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">GADGETS</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner"></section>
+
+<div class="below-banner-images">
+  <img src="https://via.placeholder.com/600x400/8D00FF/FFFFFF?text=Left+Image" alt="Left Image">
+  <img src="https://via.placeholder.com/600x400/8D00FF/FFFFFF?text=Right+Image" alt="Right Image">
+</div>
+
+<main>
+  <section class="intro">
+    <img src="https://via.placeholder.com/400x300/1f1f2e/ffffff?text=About+Us" alt="About Us">
+    <div class="text">
+      <h2>About Our Brand</h2>
+      <p>
+        We blend creativity and technology to deliver premium graphic design and website solutions. From banners to full websites, we create stunning visuals that convert.
+      </p>
+    </div>
+  </section>
+
+  <section class="image-grid">
+    <img src="https://via.placeholder.com/500x300/222/eee?text=Ad+Image+1" alt="Image 1">
+    <img src="https://via.placeholder.com/500x300/333/fff?text=Ad+Image+2" alt="Image 2">
+    <img src="https://via.placeholder.com/500x300/444/ddd?text=Ad+Image+3" alt="Image 3">
+    <img src="https://via.placeholder.com/500x300/555/ccc?text=Ad+Image+4" alt="Image 4">
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Gadgets. Designed with 💜 from Morocco.
+</footer>
+
+</body>
+</html>
