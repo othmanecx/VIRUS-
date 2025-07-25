@@ -18,7 +18,7 @@
     }
 
     header {
-      background: linear-gradient(to right, #8D00FF, #0A0A0F);
+      background: linear-gradient(to top, #01010B, #8D00FF);
       padding: 20px 10%;
       display: flex;
       justify-content: space-between;
@@ -28,22 +28,107 @@
       z-index: 10;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
-    header .logo img {
+
+    .logo img {
       height: 50px;
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
+
+    .center-image img {
+      height: 40px;
     }
-    nav ul li a {
-      font-weight: 600;
-      color: #fff;
+
+    .menu {
+      position: relative;
+    }
+
+    .menu-list {
+      position: absolute;
+      top: 45px;
+      right: 0;
+      background: #12121A;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      padding: 10px;
+      display: none;
+      flex-direction: column;
+      min-width: 150px;
+      z-index: 100;
+    }
+
+    .menu-list a {
+      color: white;
       text-decoration: none;
-      transition: color 0.3s;
+      padding: 10px;
+      font-weight: 600;
+      transition: background 0.3s;
     }
-    nav ul li a:hover {
-      color: #ccc;
+
+    .menu-list a:hover {
+      background: #222;
+    }
+
+    .burger {
+      position: relative;
+      width: 40px;
+      height: 30px;
+      background: transparent;
+      cursor: pointer;
+      display: block;
+    }
+
+    .burger input {
+      display: none;
+    }
+
+    .burger span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: white;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+
+    .burger span:nth-of-type(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(2) {
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(3) {
+      top: 100%;
+      transform-origin: left center;
+      transform: translateY(-100%);
+    }
+
+    .burger input:checked ~ span:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 0px;
+      left: 5px;
+    }
+
+    .burger input:checked ~ span:nth-of-type(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    .burger input:checked ~ span:nth-of-type(3) {
+      transform: rotate(-45deg);
+      top: 28px;
+      left: 5px;
+    }
+
+    .burger input:checked ~ .menu-list {
+      display: flex;
     }
 
     .banner {
@@ -138,14 +223,25 @@
   <div class="logo">
     <img src="images/logo.png" alt="Logo">
   </div>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+
+  <div class="center-image">
+    <img src="images/virusname.png" alt="Virus Name">
+  </div>
+
+  <div class="menu">
+    <label class="burger" for="burger">
+      <input type="checkbox" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="menu-list">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </label>
+  </div>
 </header>
 
 <section class="banner"></section>
